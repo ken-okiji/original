@@ -5,7 +5,10 @@
 
 body {
   padding-top: 80px;
+  letter-spacing: 0.1em;
 }
+
+.container {width: auto;}
 
 section {
 }
@@ -30,23 +33,34 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
+  letter-spacing: 5px;
   margin-bottom: 30px;
   text-align: center;
 }
 
 h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
+  font-size: 2em;
+  letter-spacing: 3px;
   margin-bottom: 30px;
   text-align: center;
-  font-weight: normal;
-  color: #777;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+table caption{
+  color: #337AB7;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-left: 10px;
+  border-left: 20px solid #337AB7;
+  border-bottom: 1px solid #337AB7;
+}
+
+ul li{
+  list-style-type: none;
 }
 
 /* header */
@@ -70,19 +84,20 @@ p {
 .jumbotron {
     background-image: url("main-img.jpg");
     background-size: cover;
-    background-position: center 0%;
-    padding-bottom: 30%;
+    background-position: 20%;
+    padding-bottom: 10%;
 }
 
 .jumbotron h1 {
     color: #fff;
     font-size: 4em;
-    text-shadow: 1px 1px 1px #333,
-        -1px 1px 1px #333,
-        1px -1px 1px #333,
-        -1px -1px 1px #333;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #000,
+        -2px 2px 2px #000,
+        2px -2px 2px #000,
+        -2px -2px 2px #000;
     text-align: center;
-    margin: 200px 0px 20px 0px;
+    margin: 140px 0px 20px 0px;
     letter-spacing: 0.2em;
 }
 
@@ -93,10 +108,11 @@ p {
 .jumbotron .copy {
     color:#fff;
     font-size: 2em;
-    text-shadow: 1px 1px 1px #333,
-        -1px 1px 1px #333,
-        1px -1px 1px #333,
-        -1px -1px 1px #333;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000,
+        -1px 1px 1px #000,
+        1px -1px 1px #000,
+        -1px -1px 1px #000;
     letter-spacing: 0.1em;
 }
 
@@ -107,9 +123,17 @@ p {
     padding: 20px;
 }
 
+.font-size_title {
+  font-size: 1.8em;
+  font-weight:bold;
+}
+
+.glyphicon {
+  margin:30px 0px;  
+}
+
 .contents-block {
     margin: 80px auto 0px auto;
-    text-align: center;
 }
 
 .contents-block h1 {
@@ -144,4 +168,29 @@ footer {
     text-align: center;
     background-color: #666;
     line-height: 4em;
+}
+
+small{
+  font-size: 1em;
+}
+
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.5em;
+}
+#page-top a {
+    background: #000;
+    text-decoration: none;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #666;
 }

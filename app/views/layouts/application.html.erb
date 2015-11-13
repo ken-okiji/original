@@ -7,9 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    
+  <% if notice %>
+    <p class="alert alert-success" role="alert"><%= notice %><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></p>
+  <% elsif alert %>
+    <p class="alert alert-danger" role="alert"><%= alert %><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></p>
+  <% end %>
   <%= render 'layouts/header' %>
   <div class="container">
     <%= yield %>
   </div>
+  
+  <!--フッター-->
+  <footer>
+		<div class="container">
+			<small>&copy; 2015 Recowth.</small>
+		</div>
+	</footer>
+  <p id="page-top"><a href="#wrap"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></p>
 </body>
 </html>

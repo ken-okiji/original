@@ -1,0 +1,33 @@
+    <div class="col-md-4">
+      <ol class="breadcrumb">
+        <li><a href="#">トップページ</a></li>
+        <li class="active">マイページ</li>
+      </ol>
+      
+      <div class="list-group">
+        <a href="#" class="list-group-item active">メニュー</a>
+        <a href="#" class="list-group-item">成績登録</a>
+        <a href="#" class="list-group-item">成績検索</a>
+        <a href="#" class="list-group-item">友達検索</a>
+        <%= link_to "登録情報変更", edit_user_registration_path(current_user), class:"list-group-item" %>
+      </div>
+      
+      <div class="panel panel-primary">
+        <div class="panel-heading">選手プロフィール</div>
+        <div class="panel-body">
+          <div class="col-md-3">
+            <img src="http://lorempixel.com/100/100/city" alt="..." class="img-circle">
+          </div>
+          <div class="col-md-9">
+            <ul>
+              <li>名前：</li>
+              <li>年齢：</li>
+              <li>チーム名：</li>
+              <li>ポジション：</li>
+              <li>身長：</li>
+              <li>体重：</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>

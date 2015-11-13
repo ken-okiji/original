@@ -1,42 +1,49 @@
     <!--メイン画像-->
     <div class="jumbotron">
       <div class="container">
-        <h1>サッカー成績「記録」×「成長」</h1>
+        <h1>プロへの道を「記録」する</h1>
         <p class="copy">サッカー少年・少女をもつ全ての親御様へ</p>
-        <p><a href="#" class="btn btn-primary btn-lg" role="button">無料の新規登録はこちら</a></p>
+        <p><%= link_to "新規登録はこちら", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
       </div>
     </div>
 
     <!--サービス概要-->
     <section id="about" class="contents-block">
-      <h1>サービス概要</h1>
-      <p>プロを目指すサッカー少年・少女をもつ親御様にぜひ使っていただきたいサービスを開発いたしました。生涯に渡ってお子様の成績を残すことができ、<br>
-      いつでも成績を確認することができます。選手としての成長に役立つこちらのツールを利用して、お子様と共に夢を追いませんか？</p>
+      <div class="row">
+        <h1>サービス概要</h1>
+        <div class="col-md-8 col-md-offset-2">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p>この度、プロを目指すサッカー少年・少女をもつ親御様にぜひ使っていただきたいサービス「Recowth(レコウス)」を開発いたしました。「記録（Record）」をして、選手としての「成長(Growth)」に繋げるツールです。将来に渡ってお子様の成績を残すことができ、いつでも成績を確認することができます。お子様のサッカー人生を記録しながら、共にプロになるという大きな夢を追いかけませんか？</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="about" class="contents-block">
       <div class="row">
         <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">成績の記録</div>
-              <div class="panel-body">
-                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><p>練習試合、公式試合、練習に関する様々なデータを簡単に記録し、生涯に渡って成績を残すことが出来ます。</p>
+          <div class="panel panel-primary">
+            <div class="panel-heading text-center font-size_title">成績の記録</div>
+              <div class="panel-body text-center">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><p class="text-left">練習試合、公式試合、練習に関する様々なデータを簡単に記録し、生涯に渡って成績を残すことが出来ます。</p>
               </div>
             </div>
         </div>
         <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">成績の確認</div>
-              <div class="panel-body">
-                <span class="glyphicon glyphicon-search" aria-hidden="true"></span><p>蓄積されたデータを期間などで検索。過去の成績を振り返ることで、子供の成長を確認・把握することが出来ます。</p>
+          <div class="panel panel-primary">
+            <div class="panel-heading text-center font-size_title">成績の確認</div>
+              <div class="panel-body text-center">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span><p class="text-left">蓄積されたデータを期間などで検索。過去の成績を振り返ることで、子供の成長を確認・把握することが出来ます。</p>
               </div>
             </div>
         </div>
         <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">友達の検索</div>
-              <div class="panel-body">
-                <span class="glyphicon glyphicon-user" aria-hidden="true"></span><p>同じ志を持つ親御さんとサッカーに関する情報交換を中心としたコミュニケーションをとることができます。</p>
+          <div class="panel panel-primary">
+            <div class="panel-heading text-center font-size_title">友達の検索</div>
+              <div class="panel-body text-center">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span><p class="text-left">同じ志を持つ親御さんとサッカーに関する情報交換を中心としたコミュニケーションをとることができます。</p>
               </div>
             </div>
         </div>
@@ -66,20 +73,9 @@
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-6">
-            <button type="submit" class="btn btn-default">メールを送信する</button>
+          <div class="col-sm-offset-8 col-sm-2">
+            <button type="submit" class="btn btn-primary btn-lg pull-right">内容を送信する</button>
           </div>
         </div>
       </form>
     </section>
-  
-    <!--フッター-->
-    <footer>
-			<div class="container">
-				<small>
-					&copy; 2015 Recowth.
-				</small>
-			</div>
-		</footer>
-  </body>
-</html>
