@@ -213,3 +213,14 @@ ja:
            area: 地域
            position: ポジション
            team: チーム名
+          
+          record:
+           date: 日付
+           opponent_team: 対戦相手
+           content: 内容
+           score: スコア
+           goal: ゴール
+           assist: アシスト
+           participation_time: 出場時間
+           redcard: レッドカード
+           yellowcard: イエローカード

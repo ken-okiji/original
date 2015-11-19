@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112140429) do
+ActiveRecord::Schema.define(version: 20151119001906) do
+
+  create_table "records", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "content"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "opponent_team"
+    t.string   "title"
+    t.date     "date"
+    t.string   "score"
+    t.integer  "goal"
+    t.integer  "assist"
+    t.integer  "participation_time"
+    t.integer  "yellowcard"
+    t.integer  "redcard"
+  end
+
+  add_index "records", ["user_id", "created_at"], name: "index_records_on_user_id_and_created_at"
+  add_index "records", ["user_id"], name: "index_records_on_user_id"
 
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"

@@ -1,0 +1,54 @@
+  <div class="row">
+
+    <%= render 'users/shared/mypage_sidemenu' %>
+    
+    <div class="col-md-8">
+      <div class="row">
+        <h1 class="balloon-1-bottom">成績詳細</h1>
+        <table class="table table-bordered table-striped">
+          <tr class="info">
+            <th>日付</th>
+            <th>対戦相手</th>
+            <th>スコア</th>
+            <th>ゴール</th>
+            <th>アシスト</th>
+          </tr>
+          <tr>
+            <td><%= @record.date %></td>
+            <td><%= @record.opponent_team %></td>
+            <td><%= @record.score %></td>
+            <td><%= @record.goal %></td>
+            <td><%= @record.assist %></td>
+          </tr>
+          <tr class="info">
+            <th>出場時間</th>
+            <th>レッドカード</th>
+            <th>イエローカード</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <td><%= @record.participation_time %></td>
+            <td><%= @record.redcard %></td>
+            <td><%= @record.yellowcard %></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="info">
+            <th colspan="5">内容</th>
+          </tr>
+          <tr>
+            <td colspan="5"><%= @record.content %></td>
+          </tr>
+        </table>
+      </div>
+    
+      <div class="col-sm-offset-7 col-sm-5">
+        <div class="btn-group pull-right">
+          <%= link_to '戻る', :back, class:"btn btn-warning btn-lg" %>
+          <%= link_to '編集', edit_record_path, class:"btn btn-primary btn-lg" %>
+        </div>
+      </div>
+
+    </div>
+  </div>

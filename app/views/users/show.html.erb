@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
   <div class="row">
 
     <%= render 'users/shared/mypage_sidemenu' %>
@@ -18,7 +19,7 @@
       </thead>
       <tbody>
         <tr>
-          <td>68試合</td>
+          <td><%= @user.records.count %>試合</td>
           <td>1890時間</td>
           <td>43得点</td>
           <td>29アシスト</td>
@@ -83,3 +84,6 @@
 
     </div>
   </div>
+<% else %>
+  ログインして
+<% end %>

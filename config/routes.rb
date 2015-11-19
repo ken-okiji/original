@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'users/show'
 
   get 'users/new'
-
+  
   root to: 'home#top'
   
   devise_for :users, controllers: {
@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   }
   
   resources :users, :only => [:index, :show]
+  resources :records
   resources :relationships, only: [:create, :destroy]
   
   # The priority is based upon order of creation: first created -> highest priority.

@@ -28,6 +28,12 @@ gem 'bootstrap-sass'
 
 gem 'jp_prefecture'
 
+#パンくず
+gem 'gretel'
+
+#検索
+gem 'ransack'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
