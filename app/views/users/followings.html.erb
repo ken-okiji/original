@@ -1,0 +1,18 @@
+<% if user_signed_in? %>
+  <div class="row">
+
+    <%= render 'users/shared/mypage_sidemenu' %>
+    
+    <div class="col-md-8">
+      <% if @user.following_users.any? %>
+        <ol class="friends_list">
+          <%= render 'list', users: @users %>
+          <% else %>
+          <%= @message %>
+        </ol>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  ログインして
+<% end %>

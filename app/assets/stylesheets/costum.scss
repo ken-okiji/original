@@ -43,25 +43,9 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  font-size: 2em;
-  letter-spacing: 3px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
 p {
   font-size: 1.1em;
   line-height: 1.7em;
-}
-
-table caption {
-  color: #337AB7;
-  font-size: 1.5em;
-  font-weight: bold;
-  padding-left: 10px;
-  border-left: 20px solid #337AB7;
-  border-bottom: 1px solid #337AB7;
 }
 
 ul li{
@@ -200,6 +184,15 @@ small{
     background: #666;
 }
 
+/*------------- マイページ用 ------------- */
+.well{
+  margin: 0px 0px 30px 0px;
+  border-color: #337AB7;
+  background-color: #337AB7;
+  font-size: 2.0em;
+  color: #fff;
+}
+
 .profile {
   margin-bottom: 20px;
 }
@@ -208,8 +201,28 @@ small{
   margin-left: 10px;
 }
 
-.player_profile_rayout {
-  line-height: 1.8em;
+.player_profile_rayout li{
+  line-height: 2.0em;
+}
+
+h2 {
+  font-size: 2em;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  color: #337AB7;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px 0px 20px 20px;
+  border-left: 20px solid #337AB7;
+  border-bottom: 1px solid #337AB7;
+}
+
+.table {
+  margin-bottom: 30px;  
+}
+
+.follow_button{
+  margin-bottom: 20px;
 }
 
 /* balloon-1 bottom */
@@ -235,4 +248,19 @@ small{
 	border-width: 10px 10px 0 10px;
 	border-color: #337AB7 transparent transparent transparent;
 	z-index: -1;
+}
+
+.friends_list {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user_list {
+    margin:10px 0 100px 0;
+  }
+  .user_text {
+    font-size: 1.5em;
+  }
 }

@@ -13,6 +13,13 @@ Rails.application.routes.draw do
     passwords:      "users/passwords"
   }
   
+  resources :users do
+    member do
+      get 'followings'
+      get 'followers'
+    end
+  end
+  
   resources :users, :only => [:index, :show]
   resources :records
   resources :relationships, only: [:create, :destroy]

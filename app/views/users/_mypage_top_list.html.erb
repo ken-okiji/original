@@ -1,0 +1,7 @@
+<% if users.any? %>
+  <% users.each do |user| %>
+  <div class="col-xs-6 col-md-3">
+    <%= link_to gravatar_for(user, size: 120), user %>
+  </div>
+  <% end %>
+<% end %>

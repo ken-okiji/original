@@ -1,11 +1,14 @@
     <div class="col-md-4">
-      <div class="profile"><%= gravatar_for @user %><span><%= @user.username %>様</span></div>
       <ol class="breadcrumb">
         <li><%= link_to "トップページ", root_path %></li>
         <li class="active">マイページ</li>
       </ol>
+      <div class="profile"><%= gravatar_for @user %><span><%= @user.username %>様</span></div>
       
-      <div>
+      <!--フォロー数、フォロワー数表示-->
+      <%= render 'users/shared/follow_followed_count' %>
+      
+      <div class="follow_button">
       <% if user_signed_in? %>
         <%= render 'users/shared/follow_form' %>
       <% end %>
@@ -18,21 +21,16 @@
         <a href="#" class="list-group-item">友達検索</a>
         <%= link_to "登録情報変更", edit_user_registration_path(current_user), class:"list-group-item" %>
       </div>
-      
+
       <div class="panel panel-primary">
         <div class="panel-heading">選手プロフィール</div>
         <div class="panel-body">
-          <div class="col-xs-3">
-            <img src="http://lorempixel.com/100/100/city" alt="プロフィール写真" class="img-circle">
-          </div>
-          <div class="col-xs-9 player_profile_rayout">
-            <ul>
-              <li>選手名：<%= @user.playername %></li>
-              <li>チーム名：<%= @user.team %></li>
-              <li>ポジション：<%= @user.position %></li>
-              <li>年齢：<%= @user.age %></li>
-            </ul>
-          </div>
+          <ul class="player_profile_rayout">
+            <li>選手名：<%= @user.playername %></li>
+            <li>チーム名：<%= @user.team %></li>
+            <li>ポジション：<%= @user.position %></li>
+            <li>年齢：<%= @user.age %>歳</li>
+          </ul>
         </div>
       </div>
     </div>
