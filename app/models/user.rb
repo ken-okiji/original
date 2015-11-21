@@ -32,6 +32,4 @@ class User < ActiveRecord::Base
     following_users.include?(other_user)
   end
   
-  #Avatarの設定
-  mount_uploader :avatar, AvatarUploader
 end
