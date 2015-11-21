@@ -1,10 +1,16 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:followings, :followers, :show, :create]
   
+  def index
+    @q = User.search(params[:q])
+    @users = @q.result(distinct: true)
+    @user = current_user
+  end
+  
   def show
-    @records = @user.records
+    @records = @user.records.order(date: :desc).limit(5)
     @users = @user.following_users
-    @message = "ログインしてください"
+    @message = "フォローしているユーザーがいません"
     @sum_participation_time = @records.sum(:participation_time)
     @sum_goal = @records.sum(:goal)
     @sum_assist = @records.sum(:assist)

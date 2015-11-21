@@ -8,9 +8,10 @@ class RecordsController < ApplicationController
     
     def index
       @user = current_user
-      @records= @user.records.order(date: :desc)
+      @q = Record.search(params[:q])
+      @records = @q.result(distinct: true).limit(10).order(date: :desc)
     end
-  
+      
     def show
       @user = current_user
       @record = Record.find(params[:id])
@@ -33,7 +34,6 @@ class RecordsController < ApplicationController
   
     def create
       @user = current_user
-      
       @record = current_user.records.build(record_params)
       if @record.save
         flash[:success] = "登録が完了しました"
@@ -50,8 +50,8 @@ class RecordsController < ApplicationController
     end
 
     private
+    
     def record_params
       params.require(:record).permit(:date, :opponent_team, :content, :score, :goal, :assist, :participation_time, :redcard, :yellowcard)
     end
-    
 end

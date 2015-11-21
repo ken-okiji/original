@@ -56,12 +56,41 @@
         </tbody>
       </table>
 
+      <h2>最近5試合の成績</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+          <table class="table table-bordered table-striped">
+            <tr class="info">
+              <th>日付</th>
+              <th>対戦相手</th>
+              <th>スコア</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          
+          <% @records.each do |record| %>
+            <tr>
+              <td><%= record.date %></td>
+              <td><%= record.opponent_team %></td>
+              <td><%= record.score %></td>
+              <td><%= link_to '詳細', record_path(record) %></td>
+              <td><%= link_to '編集', edit_record_path(record) %></td>
+              <td><%= link_to '削除', record, method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
+            </tr>
+          <% end %>
+          </table>
+          </div>
+        </div>
+      </div>
+      
       <h2>フォローリスト</h2>
       <div class="row">
         <% if @user.following_users.any? %>
-        <div class="col-xs-6 col-md-3">
           <%= render 'mypage_top_list', users: @users %>
-        </div>
+        <% else %>
+        <p class="text-center"><%= @message %></p>
         <% end %>
       </div>
     

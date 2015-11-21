@@ -5,6 +5,59 @@
     <div class="col-md-8">
       <div class="row">
         <h1 class="balloon-1-bottom">成績検索</h1>
+        
+        <div class="panel panel-default mb30">
+        <div class="panel-heading"></span>条件検索</div>
+          <div class="panel-body">
+            
+            <div class="row mb20">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label" for="">対戦相手</label>
+                  <div class="col-sm-8">
+                    <%= search_form_for @q do |f| %>
+                    <%= f.search_field :opponent_team_cont, class: 'form-control' %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label" for="">得点数</label>
+                  <div class="col-sm-8">
+                    <%= f.search_field :goal_eq, class: 'form-control' %>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            <div class="row mb20">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label" for="">アシスト数</label>
+                  <div class="col-sm-8">
+                    <%= f.search_field :assist_eq, class: 'form-control' %>
+                  </div>
+                </div>
+                </div>
+                <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label" for="">内容</label>
+                  <div class="col-sm-8">
+                    <%= f.search_field :content_cont, class: 'form-control' %>
+                  </div>
+                </div>
+                </div>
+              </div>
+              
+              <div class="col-sm-12 row text-center">
+                <%= f.submit '検索する', class:"btn btn-primary btn-lg" %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
         <table class="table table-bordered table-striped">
           <tr class="info">
             <th>日付</th>
@@ -15,7 +68,7 @@
             <th></th>
           </tr>
         
-        <% @records.each do |record| %>
+        <% @records = current_user.records.each do |record| %>
           <tr>
             <td><%= record.date %></td>
             <td><%= record.opponent_team %></td>

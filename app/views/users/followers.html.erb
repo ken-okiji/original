@@ -4,9 +4,11 @@
     <%= render 'users/shared/mypage_sidemenu' %>
     
     <div class="col-md-8">
+      <h2><%= @title %> (<%= @user.follower_users.count %>)</h2>
+      <p class="text-center">あなたのことをフォローしているユーザーの一覧です。</p>
       <% if @user.follower_users.any? %>
         <ol class="friends_list">
-          <%= render 'mypage_top_list', users: @users %>
+          <%= render 'list', users: @users %>
           <% else %>
           <%= @message %>
         </ol>

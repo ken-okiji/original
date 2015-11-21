@@ -4,6 +4,8 @@
     <%= render 'users/shared/mypage_sidemenu' %>
     
     <div class="col-md-8">
+      <h2><%= @title %> (<%= @user.follower_users.count %>)</h2>
+      <p class="text-center">あなたがフォローしているユーザーの一覧です。</p>
       <% if @user.following_users.any? %>
         <ol class="friends_list">
           <%= render 'list', users: @users %>

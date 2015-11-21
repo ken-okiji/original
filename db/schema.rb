@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151119001906) do
+ActiveRecord::Schema.define(version: 20151121112817) do
 
   create_table "records", force: :cascade do |t|
     t.integer  "user_id"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20151119001906) do
     t.string   "playername"
     t.string   "team"
     t.string   "position"
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
